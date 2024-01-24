@@ -1,23 +1,25 @@
 import 'package:flutter/material.dart';
 
+
+
 class HomePage extends StatelessWidget {
  HomePage ({super.key});
-
 final images = ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png',
 'https://t4.ftcdn.net/jpg/02/16/28/19/360_F_216281970_6gotBzdxtFD6vjh7RGmcc4X2JpJz3pr0.jpg', 
-'https://pbs.twimg.com/profile_images/1693367482135023616/Ovf4cg-X_400x400.jpg', 
-'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg'];
+'https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', 
+'https://buffer.com/library/content/images/size/w1200/2023/10/free-images.jpg',
+'https://images.unsplash.com/photo-1509043759401-136742328bb3?ixlib=rb-4.0.3']; 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text(' My Page' , textAlign: TextAlign.center,),  ),
+      appBar: AppBar(title: const Text('Instagram' , textAlign: TextAlign.center,),  ),
       body: 
       SingleChildScrollView(
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children : [
             Padding(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.fromLTRB(15, 20, 15, 0),
               child: Row(
                   children: [
                   Image.network('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png',
@@ -60,7 +62,7 @@ final images = ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Insta
                   ),
             ),
                  Padding(
-                   padding: const EdgeInsets.all(8.0),
+                   padding: const EdgeInsets.fromLTRB(10, 5, 10, 5),
                    child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                      children: [
@@ -81,7 +83,7 @@ final images = ['https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Insta
                    ),
                  ),
                 Padding(
-                  padding: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 11),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
@@ -159,7 +161,7 @@ super(key : key);
   final String imgUrl;
   @override
   Widget build(BuildContext context) {
-    return Image.network(
+    return Image.network( 
       imgUrl,
       fit: BoxFit.cover,);
   }
